@@ -1,5 +1,5 @@
 {
-  "name": "rho-cc-node-style-callback",
+  "name": "rho-cc-s3-bucket-name",
   "description": "Check S3 bucket names with rho-contracts",
   "version": "1.0.0",
   "license": "MPL-2.0",
