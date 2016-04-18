@@ -20,4 +20,30 @@ describe('s3BucketName', function () {
             bad(function () { s3BucketName.check('_nope'); });
         });
     });
+
+    it('accepts a single valid label', function () {
+        s3BucketName.check('first-label01');
+    });
+
+    it('accepts multiple labels', function () {
+        s3BucketName.check('first-label01.second-label02');
+    });
+
+    it('rejects initial label separator', function () {
+        should(function () {
+            s3BucketName.check('.first-label01.second-label02');
+        }).throw(/Expected s3BucketName/);
+    });
+
+    it('rejects initial hyphen', function () {
+        should(function () {
+            s3BucketName.check('-first-label01.second-label02');
+        }).throw(/Expected s3BucketName/);
+    });
+
+    it('rejects terminal label separator', function () {
+        should(function () {
+            s3BucketName.check('first-label01.second-label02.');
+        }).throw(/Expected s3BucketName/);
+    });
 });
