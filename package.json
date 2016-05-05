@@ -20,7 +20,7 @@
     "rho-contracts": "*"
   },
   "devDependencies": {
-    "bodylabs-javascript-style": "^4.0.0",
+    "bodylabs-javascript-style": "^5.0.0",
     "eslint": "^2.0.0",
     "jscs": "^2.1.1",
     "mocha": "~2.0.1",
